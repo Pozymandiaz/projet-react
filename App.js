@@ -7,7 +7,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import NavigationStack, { NavigationStack2 } from './Navigation/NavigationStack';
 import Icone from "react-native-vector-icons/Foundation";
 import FormCreate from './composants/FormCreate';
+import FormCreateUser from './composants/FormCreateUser';
 import GestionOeuvres from './composants/GestionOeuvres';
+import GestionUser from './composants/GestionUser';
 
 
 
@@ -31,13 +33,30 @@ export default function App() {
             <Tabs.Screen component={Login} name="login" options={{
             tabBarIcon : function(){
               return <Icone size={30} color={"black"} name="eye"/>
-            }        
+            }       
+             
             }}/>
+
+            <Tabs.Screen component={GestionUser} name="GestionUser" options={{
+            tabBarIcon : function(){
+              return <Icone size={30} color={"black"} name="eye"/>
+            }       
+             
+            }}/>
+
+            <Tabs.Screen component={FormCreateUser} name="user" options={{
+            tabBarIcon : function(){
+              return <Icone size={30} color={"black"} name="eye"/>
+            }       
+             
+            }}/>
+            
             <Tabs.Screen component={NavigationStack2} name="Gestion" options={{
             tabBarIcon : function(){
               return <Icone size={30} color={"black"} name="eye"/>
             }        
             }}/>
+            
            
         </Tabs.Navigator>
       </NavigationContainer>

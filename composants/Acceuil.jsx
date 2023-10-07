@@ -31,7 +31,7 @@ const Accueil = ({navigation}) => {
 
     const handleSubmit = (id) => {
       
-      navigation.navigate('Update', {id: id})
+      navigation.navigate('Single', {id: id})
     }
 
 
