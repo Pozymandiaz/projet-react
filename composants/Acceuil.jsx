@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View , Button , FlatList,  Image } from 'react-native'
+import { StyleSheet, Text, View , Button , FlatList,  Image, ScrollView } from 'react-native'
 import React , { useState, useEffect } from 'react'
 import db from "../firebaseConfig" ;
 import { getDocs , collection , doc , deleteDoc } from "firebase/firestore"
@@ -37,7 +37,7 @@ const Accueil = ({navigation}) => {
 
 
   return (
-    <View>
+    <ScrollView>
       <Text>Accueil</Text>
       
       <FlatList 
@@ -54,7 +54,7 @@ const Accueil = ({navigation}) => {
             </View>
          }}
       />
-    </View>
+    </ScrollView>
   )
 }
 
